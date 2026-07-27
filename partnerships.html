@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GIRLS IRL — Partnerships</title>
+<meta content="Partner with Girls IRL — redefining connection for South Asian and POC women." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400;1,9..144,600&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="responsive.css">
+<style>
+:root {
+  --blush:#F7E1E6;
+  --blush-mid:#EDBED0;
+  --rose:#D4849C;
+  --rose-dark:#B86380;
+  --cream:#FDF8F5;
+  --cream-warm:#F5EDE8;
+  --ink:#1A1118;
+  --ink-mid:#3B2535;
+  --ink-soft:rgba(26,17,24,0.55);
+  --border:rgba(212,132,156,0.18);
+  --page-bg:#faf0fa;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Instrument Sans',sans-serif;background:var(--page-bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:300;letter-spacing:-0.02em}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;padding:0 48px;background:rgba(250,240,250,0.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.nav-inner{width:100%;max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav-logo-img{height:34px;width:auto;display:block}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.nav-links a.active,.nav-links a:hover{color:var(--rose-dark)}
+.btn-fill{background:var(--ink);color:var(--cream);padding:12px 24px;border-radius:100px;font-size:12px;font-weight:500;letter-spacing:.06em}
+.nav-mobile-drawer li{list-style:none}
+
+/* HERO */
+.p-hero{padding:148px 48px 16px;text-align:center}
+.p-hero-inner{max-width:820px;margin:0 auto}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-dark);margin-bottom:18px}
+.p-hero h1{font-size:clamp(48px,7vw,88px);line-height:1.02}
+.p-hero h1 em{color:var(--rose-dark);font-style:italic}
+.p-hero .subhead{margin-top:20px;font-size:17px;color:var(--ink-soft);max-width:600px;margin-left:auto;margin-right:auto}
+
+/* DIVIDER */
+.section-divider{width:64px;height:1px;background:var(--rose);margin:0 auto}
+
+/* SECTION WRAPPER */
+.p-section{padding:24px 48px 80px}
+.p-section-inner{max-width:1100px;margin:0 auto}
+
+/* WHY SECTION */
+.why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:48px}
+.why-card{background:var(--cream);border:1px solid var(--border);border-radius:24px;padding:36px 32px}
+.why-card .wc-num{font-family:'Fraunces',serif;font-size:42px;color:var(--rose-dark);line-height:1;margin-bottom:14px}
+.why-card .wc-label{font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.why-card .wc-desc{font-size:14px;color:var(--ink-soft);line-height:1.6}
+
+/* AUDIENCE SECTION */
+.audience-section{background:var(--cream-warm)}
+.audience-charts{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px;align-items:start}
+.chart-block{text-align:center}
+.chart-title{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mid);font-weight:500;margin-bottom:28px}
+.donut-wrap{position:relative;width:160px;height:160px;margin:0 auto 20px}
+.donut-wrap svg{width:100%;height:100%}
+.donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.donut-pct{font-family:'Fraunces',serif;font-size:26px;font-weight:400;color:var(--ink);line-height:1}
+.donut-sub{font-size:10px;color:var(--ink-soft);margin-top:3px;max-width:56px;text-align:center;line-height:1.3}
+.chart-legend{display:flex;flex-direction:column;gap:8px;align-items:center}
+.legend-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-mid)}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+/* INTEGRATION MENU */
+.integration-intro{font-size:16px;color:var(--ink-soft);max-width:680px;margin:0 auto 56px;text-align:center;line-height:1.7}
+.integration-cards{display:flex;flex-direction:column;gap:32px}
+.int-card{background:var(--cream);border:1px solid var(--border);border-radius:24px;padding:44px 48px;display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start}
+.int-num{font-family:'Fraunces',serif;font-size:54px;color:var(--blush-mid);line-height:1}
+.int-body{}
+.int-tag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-dark);font-weight:500;margin-bottom:8px}
+.int-title{font-family:'Fraunces',serif;font-size:26px;color:var(--ink);margin-bottom:10px}
+.int-desc{font-size:14px;color:var(--ink-soft);margin-bottom:20px}
+.int-items{list-style:none;display:flex;flex-direction:column;gap:10px}
+.int-items li{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink-mid)}
+.int-items li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--rose-dark);flex-shrink:0;margin-top:7px}
+.int-items strong{font-weight:500;color:var(--rose-dark)}
+
+/* FORM SECTION */
+.form-section{background:var(--ink)}
+.form-section .eyebrow{color:var(--rose)}
+.form-section h2{color:var(--cream)}
+.form-section .subhead{color:rgba(253,248,245,0.55)}
+.form-section-inner{max-width:680px;margin:0 auto;padding:80px 48px;text-align:center}
+.partnership-form{margin-top:48px;display:flex;flex-direction:column;gap:16px;text-align:left}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-field{display:flex;flex-direction:column;gap:6px}
+.form-field label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(253,248,245,0.5);font-weight:500}
+.form-field input,
+.form-field select,
+.form-field textarea{background:rgba(253,248,245,0.07);border:1px solid rgba(253,248,245,0.14);border-radius:12px;padding:14px 18px;font-family:'Instrument Sans',sans-serif;font-size:14px;color:var(--cream);outline:none;transition:border-color .2s}
+.form-field input::placeholder,
+.form-field textarea::placeholder{color:rgba(253,248,245,0.28)}
+.form-field select{appearance:none;cursor:pointer;color:rgba(253,248,245,0.7)}
+.form-field select option{background:#2a1a28;color:var(--cream)}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{border-color:var(--rose)}
+.form-field textarea{resize:vertical;min-height:120px}
+.form-submit{background:var(--rose-dark);color:var(--cream);border:none;padding:18px 40px;border-radius:100px;font-family:'Instrument Sans',sans-serif;font-size:14px;font-weight:500;letter-spacing:.06em;cursor:pointer;transition:background .2s,transform .15s;margin-top:8px;align-self:center}
+.form-submit:hover{background:var(--rose);transform:scale(1.03)}
+
+/* SECTION HEADING CENTERED */
+.section-heading{text-align:center;margin-bottom:16px}
+.section-heading h2{font-size:clamp(32px,4vw,52px)}
+.section-heading h2 em{color:var(--rose-dark);font-style:italic}
+.section-heading .subhead{font-size:15px;color:var(--ink-soft);margin-top:12px}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .p-hero{padding:110px 24px 60px}
+  .p-section{padding:60px 24px}
+  .why-grid{grid-template-columns:1fr}
+  .audience-charts{grid-template-columns:1fr;gap:48px}
+  .int-card{grid-template-columns:1fr;gap:20px;padding:32px 28px}
+  .int-num{font-size:36px}
+  .form-row{grid-template-columns:1fr}
+  .form-section-inner{padding:60px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img class="nav-logo-img" src="girls-irl-logo.png" alt="Girls IRL logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a class="active" href="partnerships.html">Partnerships</a></li>
+    </ul>
+    <a class="btn-fill homepage-ticket-btn" href="tickets.html">Buy Tickets</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-mobile-drawer" id="nav-mobile-drawer"></div>
+</nav>
+
+<!-- HERO -->
+<section class="p-hero">
+  <div class="p-hero-inner">
+    <div class="eyebrow">Partnerships</div>
+    <h1>Bring Your Brand <em>IRL.</em></h1>
+    <p class="subhead">Girls IRL is more than a community — it's a movement redefining what connection looks like. We partner with forward-thinking brands/businesses to create meaningful moments and experiences that leave a lasting mark.</p>
+  </div>
+</section>
+
+<!-- WHY YOUR BRAND BELONGS HERE -->
+<section class="p-section">
+  <div class="p-section-inner">
+    <div class="section-heading">
+      <div class="eyebrow">Market Opportunity</div>
+      <h2>Why Your Brand <em>Belongs Here</em></h2>
+      <p class="subhead">We center confidence, self-development, and connection for South Asian and POC women — a high-growth demographic often overlooked in existing spaces.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="wc-num">25k+</div>
+        <div class="wc-label">Built-In Trust</div>
+        <div class="wc-desc">Partner with an established voice for a community of 25k+ seeking dating, wellness, and lifestyle mentorship.</div>
+      </div>
+      <div class="why-card">
+        <div class="wc-num">500+</div>
+        <div class="wc-label">Scalable Impact</div>
+        <div class="wc-desc">With 500+ inquiries since launch, our event demand consistently outpaces capacity. We are actively scaling from intimate 100-person sessions to 500+ attendee venues.</div>
+      </div>
+      <div class="why-card">
+        <div class="wc-num">87%</div>
+        <div class="wc-label">Viral Social Proof</div>
+        <div class="wc-desc">87% of attendees organically share event content, placing your brand directly in "GRWM" and "Come With Me" vlogs.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE AT A GLANCE -->
+<section class="p-section audience-section">
+  <div class="p-section-inner">
+    <div class="section-heading">
+      <div class="eyebrow">Our Audience</div>
+      <h2>At a <em>Glance</em></h2>
+    </div>
+    <div class="audience-charts">
+
+      <!-- LOCATION CHART -->
+      <div class="chart-block">
+        <div class="chart-title">Location</div>
+        <div class="donut-wrap">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <!-- Toronto 83% -->
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#6B2D4E" stroke-width="28"
+              stroke-dasharray="314.16 376.99"
+              stroke-dashoffset="0"
+              transform="rotate(-90 80 80)"/>
+            <!-- Vancouver 16.6% -->
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#EDBED0" stroke-width="28"
+              stroke-dasharray="62.83 376.99"
+              stroke-dashoffset="-314.16"
+              transform="rotate(-90 80 80)"/>
+          </svg>
+          <div class="donut-center">
+            <span class="donut-pct">83%</span>
+            <span class="donut-sub">Toronto</span>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <div class="legend-row"><span class="legend-dot" style="background:#6B2D4E"></span>83% Toronto</div>
+          <div class="legend-row"><span class="legend-dot" style="background:#EDBED0"></span>16.6% Vancouver</div>
+        </div>
+      </div>
+
+      <!-- AGE CHART -->
+      <div class="chart-block">
+        <div class="chart-title">Age</div>
+        <div class="donut-wrap">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <!-- Gen Z 64% -->
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#6B2D4E" stroke-width="28"
+              stroke-dasharray="241.22 376.99"
+              stroke-dashoffset="0"
+              transform="rotate(-90 80 80)"/>
+            <!-- Millennial 23% -->
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#EDBED0" stroke-width="28"
+              stroke-dasharray="86.71 376.99"
+              stroke-dashoffset="-241.22"
+              transform="rotate(-90 80 80)"/>
+            <!-- Other 13% -->
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#F7E1E6" stroke-width="28"
+              stroke-dasharray="49.01 376.99"
+              stroke-dashoffset="-327.93"
+              transform="rotate(-90 80 80)"/>
+          </svg>
+          <div class="donut-center">
+            <span class="donut-pct">64%</span>
+            <span class="donut-sub">Gen Z</span>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <div class="legend-row"><span class="legend-dot" style="background:#6B2D4E"></span>64% Gen Z (19–25)</div>
+          <div class="legend-row"><span class="legend-dot" style="background:#EDBED0"></span>23% Millennial (25–30)</div>
+          <div class="legend-row"><span class="legend-dot" style="background:#F7E1E6"></span>13% Other</div>
+        </div>
+      </div>
+
+      <!-- COMMUNITY CHART -->
+      <div class="chart-block">
+        <div class="chart-title">Community Focus</div>
+        <div class="donut-wrap">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <!-- 100% -->
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#6B2D4E" stroke-width="28"
+              stroke-dasharray="376.99 376.99"
+              stroke-dashoffset="0"
+              transform="rotate(-90 80 80)"/>
+          </svg>
+          <div class="donut-center">
+            <span class="donut-pct">100%</span>
+            <span class="donut-sub">Girls &amp; LGBTQ+</span>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <div class="legend-row"><span class="legend-dot" style="background:#6B2D4E"></span>100% Girls &amp; LGBTQ+</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRATION MENU -->
+<section class="p-section">
+  <div class="p-section-inner">
+    <div class="section-heading">
+      <div class="eyebrow">The Integration Menu</div>
+      <h2>We Don't Do <em>Passive</em> Sponsorships</h2>
+    </div>
+    <p class="integration-intro">We integrate brands into the community through high-aesthetic, culture-driven touchpoints that drive real engagement and organic content creation.</p>
+    <div class="integration-cards">
+
+      <div class="int-card">
+        <div class="int-num">01</div>
+        <div class="int-body">
+          <div class="int-tag">Experiential Hubs</div>
+          <div class="int-title">Bring your brand to life through custom, high-traffic activations.</div>
+          <ul class="int-items">
+            <li><div><strong>Beauty &amp; Wellness Bar</strong> — A touch-up bar, braid bar, or mocktail station built around your product</div></li>
+            <li><div><strong>Mindfulness Space</strong> — Co-branded journaling and reflection moments tied to self-development</div></li>
+            <li><div><strong>Pop-Up Boutique</strong> — A dedicated, aesthetic brand footprint for direct product interaction</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="int-card">
+        <div class="int-num">02</div>
+        <div class="int-body">
+          <div class="int-tag">Content Capital</div>
+          <div class="int-title">Make your brand the most photographed moment in the room.</div>
+          <ul class="int-items">
+            <li><div><strong>Photo Moments</strong> — Custom backdrops and step-and-repeats engineered for social feeds</div></li>
+            <li><div><strong>Product Gifting</strong> — Premium gift bag placements and targeted sampling straight into key hands</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="int-card">
+        <div class="int-num">03</div>
+        <div class="int-body">
+          <div class="int-tag">Main Stage</div>
+          <div class="int-title">Own the narrative where it matters most.</div>
+          <ul class="int-items">
+            <li><div><strong>Stage Presence</strong> — On-stage shoutouts and "Presented By" moments led by our founding voice</div></li>
+            <li><div><strong>Real Insights</strong> — Opt-in QR lead capture and exclusive post-event consumer survey data</div></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="form-section">
+  <div class="form-section-inner">
+    <div class="eyebrow">Let's Build Something Together</div>
+    <h2 style="font-family:'Fraunces',serif;font-weight:300;font-size:clamp(32px,4vw,52px);color:var(--cream)">Ready to bring your brand <em style="color:var(--rose);font-style:italic">IRL?</em></h2>
+    <p class="subhead">Fill out the brief form below and our partnerships team will be in touch within 48 hours.</p>
+    <form class="partnership-form" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" placeholder="Your name" required/>
+        </div>
+        <div class="form-field">
+          <label for="company">Company / Brand Name</label>
+          <input type="text" id="company" placeholder="Your brand" required/>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="email">Work Email</label>
+        <input type="email" id="email" placeholder="you@brand.com" required/>
+      </div>
+      <div class="form-field">
+        <label for="interest">What are you interested in?</label>
+        <select id="interest" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="irl-sponsorship">IRL Event Sponsorship</option>
+          <option value="product-gifting">Product Placement / Gifting</option>
+          <option value="digital-activation">Custom Digital Activation</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="message">Message / Collaboration Vision</label>
+        <textarea id="message" placeholder="Tell us about your brand and how you'd love to show up in our community..." required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Inquiry →</button>
+    </form>
+  </div>
+</section>
+
+<script>
+const btn=document.getElementById('nav-hamburger'),drawer=document.getElementById('nav-mobile-drawer');
+if(btn&&drawer){drawer.innerHTML=document.querySelector('.nav-links')?.innerHTML||'';btn.onclick=()=>{btn.classList.toggle('open');drawer.classList.toggle('open');}}
+
+async function handleSubmit(e) {
+  e.preventDefault();
+  const submitBtn = e.target.querySelector('.form-submit');
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+
+  const payload = {
+    fullName: document.getElementById('full-name').value,
+    company:  document.getElementById('company').value,
+    email:    document.getElementById('email').value,
+    interest: document.getElementById('interest').value,
+    message:  document.getElementById('message').value
+  };
+
+  try {
+    await fetch('https://script.google.com/macros/s/AKfycbzAsAu48nJF0GpAbJ1BSqkx9_YWyNl4sFC3hT8dHXnOzImDy8fAAINu5NdBAL1d_ODD/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    submitBtn.textContent = 'Sent! ✓';
+    submitBtn.style.background = '#4caf82';
+    e.target.reset();
+  } catch {
+    submitBtn.textContent = 'Something went wrong — try again';
+    submitBtn.style.background = '#c0392b';
+    submitBtn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>

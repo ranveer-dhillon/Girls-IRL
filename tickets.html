@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Girls IRL Tickets</title><style>
+
+#eventbrite-widget-container-1990058122415{
+    width:100%;
+    height:850px !important;
+    min-height:850px !important;
+}
+
+#eventbrite-widget-container-1990058122415 iframe{
+    width:100% !important;
+    height:850px !important;
+    min-height:850px !important;
+    border:none;
+}
+
+body{margin:0;font-family:Arial,sans-serif;background:#faf0fa;color:#1A1118}
+.container{max-width:1000px;margin:auto;padding:60px 20px}
+h1{text-align:center;font-size:48px;margin-bottom:10px}
+p{text-align:center;margin-bottom:40px}
+.back-btn{display:inline-block;background:#1A1118;color:white;padding:12px 24px;border-radius:999px;text-decoration:none;margin-bottom:30px}
+
+.promo-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-bottom:32px;
+}
+.promo-section input{
+    padding:10px 16px;
+    border:1.5px solid #1A1118;
+    border-radius:999px;
+    font-size:15px;
+    outline:none;
+    width:200px;
+    background:#fff;
+    color:#1A1118;
+}
+.promo-section input::placeholder{
+    color:#aaa;
+}
+.promo-section button{
+    padding:10px 22px;
+    background:#1A1118;
+    color:#fff;
+    border:none;
+    border-radius:999px;
+    font-size:15px;
+    cursor:pointer;
+}
+.promo-section button:hover{
+    background:#3a2a38;
+}
+.promo-msg{
+    text-align:center;
+    font-size:14px;
+    margin-top:-20px;
+    margin-bottom:20px;
+    min-height:20px;
+}
+.promo-msg.success{ color: #2a7a2a; }
+.promo-msg.error{ color: #c0392b; }
+
+</style>
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="back-btn">← Back</a>
+    <h1>Buy Tickets</h1>
+    <p>Reserve your spot for the next Girls IRL event.</p>
+
+    <div class="promo-section">
+        <input type="text" id="promoInput" placeholder="Promo code" />
+        <button onclick="applyPromo()">Apply</button>
+    </div>
+    <div class="promo-msg" id="promoMsg"></div>
+
+    <div id="eventbrite-widget-container-1990058122415"></div>
+</div>
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+<script type="text/javascript">
+    var currentPromo = '';
+
+    function loadWidget(promoCode) {
+        var container = document.getElementById('eventbrite-widget-container-1990058122415');
+        container.innerHTML = '';
+
+        var config = {
+            widgetType: 'checkout',
+            eventId: '1990058122415',
+            iframeContainerId: 'eventbrite-widget-container-1990058122415',
+            iframeContainerHeight: 850,
+            onOrderComplete: function() { console.log('Order complete!'); }
+        };
+
+        if (promoCode) {
+            config.promoCode = promoCode;
+        }
+
+        window.EBWidgets.createWidget(config);
+    }
+
+    var validCodes = ['BESTIE5'];
+
+    function applyPromo() {
+        var code = document.getElementById('promoInput').value.trim().toUpperCase();
+        var msg = document.getElementById('promoMsg');
+
+        if (!code) {
+            msg.textContent = 'Please enter a promo code.';
+            msg.className = 'promo-msg error';
+            return;
+        }
+
+        if (!validCodes.includes(code)) {
+            msg.textContent = 'Invalid promo code.';
+            msg.className = 'promo-msg error';
+            loadWidget('');
+            return;
+        }
+
+        currentPromo = code;
+        msg.textContent = 'Promo code "' + code + '" applied!';
+        msg.className = 'promo-msg success';
+        loadWidget(code);
+    }
+
+    // Load widget on page load with no promo code
+    loadWidget('');
+</script>
+</body>
+</html>
